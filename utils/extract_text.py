@@ -6,7 +6,6 @@ import pytesseract
 import io
 import shutil
 
-# Auto-detect Tesseract for Windows + Linux (Render)
 tesseract_path = shutil.which("tesseract")
 if tesseract_path:
     pytesseract.pytesseract.tesseract_cmd = tesseract_path
@@ -54,3 +53,4 @@ def extract_text(upload_file):
         return extract_docx(upload_file.file)
 
     return upload_file.file.read().decode("utf-8", errors="ignore")
+
