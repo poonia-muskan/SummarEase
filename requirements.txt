@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+PyPDF2
+pdfplumber
+python-docx
+pytesseract
+Pillow
+langdetect
+sumy
+yake
+googletrans==4.0.0-rc1
