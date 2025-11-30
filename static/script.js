@@ -1,5 +1,4 @@
-// Since frontend + backend are the same service, API_URL is empty
-const API_URL = "";
+const API_URL = "https://summarease-f659.onrender.com";
 
 function getFile() {
     return document.getElementById("fileInput").files[0];
@@ -122,3 +121,4 @@ function toggleTheme() {
         document.body.classList.contains("light") ? "light" : "dark"
     );
 }
+
