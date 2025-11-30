@@ -14,13 +14,11 @@ from utils.translate import translate_text
 
 app = FastAPI()
 
-# -------- Serve frontend -----------
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 def root():
     return FileResponse("static/index.html")
-# -----------------------------------
 
 app.add_middleware(
     CORSMiddleware,
