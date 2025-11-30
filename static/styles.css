@@ -17,7 +17,6 @@ body {
   color: var(--text);
 }
 
-/**************** HEADER ***************/
 .center-title {
   text-align: center;
   margin-top: 38px;
@@ -229,3 +228,4 @@ body.light {
 body.light .glass {
   color: var(--text);
 }
+
