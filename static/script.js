@@ -34,7 +34,6 @@ async function summarize() {
     let formData = new FormData();
     formData.append("file", file);
 
-    // Calls /summarize on SAME domain
     let url = `/summarize`;
     const params = new URLSearchParams();
 
@@ -75,7 +74,6 @@ async function getKeywords() {
     formData.append("file", file);
 
     try {
-        // Calls /keywords on SAME domain
         const response = await fetch(`/keywords`, {
             method: "POST",
             body: formData
@@ -121,4 +119,5 @@ function toggleTheme() {
         document.body.classList.contains("light") ? "light" : "dark"
     );
 }
+
 
