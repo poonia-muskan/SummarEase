@@ -19,7 +19,6 @@ def summarize_textrank(text: str, word_limit: int, lang: str) -> str:
     if total == 0:
         return ""
 
-    # rough estimate: ~18 words per sentence
     avg_words = 18
     needed = max(1, word_limit // avg_words)
     needed = min(needed, total)
@@ -27,7 +26,6 @@ def summarize_textrank(text: str, word_limit: int, lang: str) -> str:
     summary_sentences = summarizer(parser.document, needed)
     summary = " ".join(str(s) for s in summary_sentences)
 
-    # if still under target, gradually increase sentence count
     while len(summary.split()) < word_limit and needed < total:
         needed += 1
         summary_sentences = summarizer(parser.document, needed)
@@ -43,7 +41,6 @@ def generate_summary(text: str, word_limit: int | None = None):
 
     lang = detect_language(text)
 
-    # default word limit if none is provided
     if not word_limit:
         word_limit = 180
 
