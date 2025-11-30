@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://summarease-f659.onrender.com";
 
 function getFile() {
     return document.getElementById("fileInput").files[0];
@@ -119,3 +119,4 @@ function toggleTheme() {
         document.body.classList.contains("light") ? "light" : "dark"
     );
 }
+
